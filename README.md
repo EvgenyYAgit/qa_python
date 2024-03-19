@@ -1,1 +1,21 @@
 # qa_python
+#добававление книги без названия 
+test_add_new_book_add_two_books
+#добававление книги без названия
+test_book_has_no_genre_add_book_without_genre 
+#добававление книги без названия
+test_add_new_book_add_book_without_name
+#добавление книги с названием более 41 символов(такая книга реально существует)
+test_add_new_book_add_big_book_title
+#установка книге жанра и получение жанра книги по имени
+test_set_book_genre_set_and_get_book_genre
+#вывод списка книг с опредленном жанром
+test_get_books_with_specific_genre_browsing_list_books
+#получить словарь books_genre
+test_get_books_genre_get_books
+#возвратить книги, подходящие детям
+test_get_books_for_children_get_books
+#добавить книгу в Избранное и получить список избранных книг
+test_add_book_in_favorites_add_and_get_books_list
+#удалить книгу из Избранного и получить список избранных книг
+test_delete_book_from_favorites_delete_and_get_books_list

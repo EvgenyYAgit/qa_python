@@ -42,7 +42,7 @@ class TestBooksCollector:
         assert collector.books_genre.get(name_book) == 'Ужасы'
 
     # вывод списка книг с опредленном жанром
-    @pytest.mark.parametrize('name_book1, name_book2', [['Гордость и предубеждение и зомби', 'Повелитель стихий'],['Живые мертвецы', 'Интерстеллар']])
+    @pytest.mark.parametrize('name_book1, name_book2', [['Гордость и предубеждение и зомби', 'Повелитель стихий'], ['Живые мертвецы', 'Интерстеллар']])
     def test_get_books_with_specific_genre_browsing_list_books(self, name_book1, name_book2):
         collector = BooksCollector()
         collector.add_new_book(name_book1)
@@ -52,7 +52,7 @@ class TestBooksCollector:
         assert collector.get_books_with_specific_genre('Фантастика') == [name_book2]
 
     # получить словарь books_genre
-    @pytest.mark.parametrize('name_book1, name_book2', [['Гордость и предубеждение и зомби', 'Повелитель стихий'],['Живые мертвецы', 'Интерстеллар']])
+    @pytest.mark.parametrize('name_book1, name_book2', [['Гордость и предубеждение и зомби', 'Повелитель стихий'], ['Живые мертвецы', 'Интерстеллар']])
     def test_get_books_genre_get_books(self, name_book1, name_book2):
         collector = BooksCollector()
         collector.add_new_book(name_book1)
@@ -63,7 +63,7 @@ class TestBooksCollector:
                                                name_book2: 'Фантастика'}
 
     # возвратить книги, подходящие детям
-    @pytest.mark.parametrize('name_book1, name_book2', [['Гордость и предубеждение и зомби', 'Повелитель стихий'],['Живые мертвецы', 'Интерстеллар']])
+    @pytest.mark.parametrize('name_book1, name_book2', [['Гордость и предубеждение и зомби', 'Повелитель стихий'], ['Живые мертвецы', 'Интерстеллар']])
     def test_get_books_for_children_get_books(self, name_book1, name_book2):
         collector = BooksCollector()
         collector.add_new_book(name_book1)
@@ -73,7 +73,7 @@ class TestBooksCollector:
         assert collector.get_books_for_children() == [name_book2]
 
     # добавить книгу в Избранное и получить список избранных книг
-    @pytest.mark.parametrize('name_book1, name_book2', [['Гордость и предубеждение и зомби', 'Повелитель стихий'],['Живые мертвецы', 'Интерстеллар']])
+    @pytest.mark.parametrize('name_book1, name_book2', [['Гордость и предубеждение и зомби', 'Повелитель стихий'], ['Живые мертвецы', 'Интерстеллар']])
     def test_add_book_in_favorites_add_and_get_books_list(self, name_book1, name_book2):
         collector = BooksCollector()
         collector.add_new_book(name_book1)
@@ -84,7 +84,7 @@ class TestBooksCollector:
         assert collector.get_list_of_favorites_books() == [name_book1]
 
     # удалить книгу из Избранного и получить список избранных книг
-    @pytest.mark.parametrize('name_book1, name_book2', [['Гордость и предубеждение и зомби', 'Повелитель стихий'],['Живые мертвецы', 'Интерстеллар']])
+    @pytest.mark.parametrize('name_book1, name_book2', [['Гордость и предубеждение и зомби', 'Повелитель стихий'], ['Живые мертвецы', 'Интерстеллар']])
     def test_delete_book_from_favorites_delete_and_get_books_list(self, name_book1, name_book2):
         collector = BooksCollector()
         collector.add_new_book(name_book1)
